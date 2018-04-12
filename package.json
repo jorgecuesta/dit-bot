@@ -1,0 +1,19 @@
+{
+  "name": "ditbot",
+  "version": "1.0.0",
+  "description": "Destiny Item Tracker Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "keywords": [
+    "destiny2",
+    "destinyitemtracker"
+  ],
+  "author": "Jorge Cuesta <jckpo2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.io": "git+https://github.com/Woor/discord.io.git#gateway_v6",
+    "winston": "^2.4.1"
+  }
+}
