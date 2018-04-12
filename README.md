@@ -20,3 +20,7 @@ Little bot for [Discord](https://) that used [Bungie](https://bungie.net) API to
 
 #### TODOS:
 * I18N commands and options.
+
+#### Bot URI
+
+* https://discordapp.com/api/oauth2/authorize?client_id=<client-id>&scope=bot&permissions=0x00000800
