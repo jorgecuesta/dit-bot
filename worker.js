@@ -69,6 +69,16 @@ const commandNotFound = function(message, requiredHelp = false) {
   message.channel.send({embed});
 };
 
+const emptyResults = function(message) {
+  const embed = new Discord.RichEmbed()
+      .setTitle('¯\\_(ツ)_/¯')
+      .setDescription('La busqueda que intentaste no arrojo resultados')
+      .setColor(0x00AE86)
+      .setTimestamp();
+
+  message.channel.send({embed});
+};
+
 logger.info('starting bot');
 
 const onLocaleResponse = function(response) {
@@ -145,7 +155,7 @@ const onLocaleResponse = function(response) {
         const filtered = results.filter(r => r.data.itemType === type);
 
         if (filtered.length === 0) {
-          commandNotFound(message);
+          emptyResults(message);
           return;
         }
 
